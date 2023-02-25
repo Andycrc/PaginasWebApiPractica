@@ -14,7 +14,7 @@ namespace WebApiPractica.Controllers
         public equiposController(equiposContext equiposContexto) 
         {
             _equiposContexto= equiposContexto;
-
+            //comentario
         
         }
 
@@ -32,7 +32,6 @@ namespace WebApiPractica.Controllers
 
             return Ok(ListadoEquipos);
         }
-
 
     }
 
