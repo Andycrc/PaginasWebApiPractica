@@ -18,7 +18,10 @@ namespace WebApiPractica.Controllers
             //comentario
         
         }
-
+        /// <summary>
+        /// Obtener todo los datos
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("getall")]
         public IActionResult ObtenerEquipos()
