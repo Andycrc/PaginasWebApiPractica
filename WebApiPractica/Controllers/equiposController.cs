@@ -18,10 +18,13 @@ namespace WebApiPractica.Controllers
             //comentario
         
         }
+
         /// <summary>
-        /// Obtener todo los datos
+        /// Leer todo los registros
         /// </summary>
         /// <returns></returns>
+        /// 
+
         [HttpGet]
         [Route("getall")]
         public IActionResult ObtenerEquipos()
@@ -37,6 +40,11 @@ namespace WebApiPractica.Controllers
             return Ok(ListadoEquipos);
         }
 
+        /// <summary>
+        /// Buscar por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
          [HttpGet]
          [Route("getbyid")]
          public IActionResult Get(int id)
@@ -49,7 +57,12 @@ namespace WebApiPractica.Controllers
         
       
 
-        //
+        /// <summary>
+        /// Buscar por descripción
+        /// </summary>
+        /// <param name="filtro"></param>
+        /// <returns></returns>
+        /// 
         [HttpGet]
         [Route("find")]
         public IActionResult buscar(string filtro){
@@ -66,6 +79,11 @@ namespace WebApiPractica.Controllers
             
         }
 
+        /// <summary>
+        /// Crear registros
+        /// </summary>
+        /// <param name="equiposNuevo"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("add")]
         public IActionResult Crear([FromBody] equipos equiposNuevo)
@@ -84,6 +102,13 @@ namespace WebApiPractica.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Modificar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="equiposModificar"></param>
+        /// <returns></returns>
         [HttpPut]
         [Route("actualizar/{id}")]
         public IActionResult actualizar(int id, [FromBody]equipos equiposModificar)
@@ -102,6 +127,14 @@ namespace WebApiPractica.Controllers
 
             return Ok(equiposExiste);
         }
+
+
+        /// <summary>
+        /// Eliminar o modificar el estado
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
 
         [HttpDelete]
         [Route("delete/{id}")]
