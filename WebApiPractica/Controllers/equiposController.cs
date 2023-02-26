@@ -15,7 +15,7 @@ namespace WebApiPractica.Controllers
         public equiposController(equiposContext equiposContexto) 
         {
             _equiposContexto= equiposContexto;
-            //comentario holll
+            //comentario holll lalalallaal
         
         }
 
